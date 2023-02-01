@@ -1,0 +1,48 @@
+<section class="mb-5">
+  <div class="container mt-4">
+   <div class="row">
+     <div class="col-md-6">
+       <h2 class="text-centre">Edit Product</h2>
+       {{#if change}}
+       <form action="/admin/productEditted/?id={{productData._id}}" method="post" enctype="multipart/form-data"  >
+       {{else}}
+       <form action="/admin/productEdit/?id={{productData._id}}" method="post" enctype="multipart/form-data"  >
+       {{/if}}
+         <label for="">Product Id</label>
+         <input type="number" name="Product_id" value="{{productData.Product_id}}" class="form-control" required>
+         <br>
+         <label for="">Product Name</label>
+         <input type="text" name="product_name" value="{{productData.product_name}}" class="form-control" required>
+         <br>
+         <label for="">Category</label>
+         <input type="text" name="category" value="{{productData.category}}" class="form-control">
+         <br>           
+         <label for="">Price</label>
+         <input type="number" name="price" value="{{productData.price}}" class="form-control" required>
+         <br>
+         <label for="">Quantity</label>
+         <input type="number" name="quantity"  value="{{productData.quantity}}" class="form-control" required>
+         <br>
+         {{#if change}}
+         <label for="">Add Image</label>
+         <br>
+         
+         <input type="file"  name="img" class="form-control"  required>
+         {{else}}
+         <label for="">Image</label>
+         <br>
+         
+         <img src="/images/{{productData._id}}.jpg" style="height: 5cm; width:5cm" >
+         <a class="mb-2" href="/admin/changeimage?id={{productData._id}}"><button type="button" class=" ml-4 btn btn-outline-danger btn-sm">Change Image</button></a>
+
+         {{/if}}
+         <br>
+          <button type="submit" style="width:20ex;" class="btn btn-block btn-success btn-lg ml-4 mt-4">Submit</button>
+       
+       </form>
+     </div>
+   </div> 
+  </div>
+</div>
+
+</section>

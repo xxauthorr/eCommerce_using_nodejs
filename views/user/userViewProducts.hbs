@@ -1,0 +1,22 @@
+
+    <div class="container">
+    <div class="row mt-5">
+        {{#each product}}
+        
+        <div class="p-2 col-md-3">
+            <div class="card" style="width: 17rem">
+                <a href="/user/viewproduct/?id={{this._id}}">
+                <img src="/images/{{this._id}}.jpg"
+                    class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{this.product_name}}</h5  <!-- product name-->
+                    <p class="card-text">{{this.category}}</p>      <!-- category-->
+                    <h3 class="card-text">₹{{this.price}}</h3>      <!-- price-->
+                    <a href="/user/addToCart/?id={{this._id}}" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

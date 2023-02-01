@@ -1,0 +1,46 @@
+<body>
+
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid row">
+            <div class="ml-2">
+                <a class="navbar-brand text-primary" style=" font-size:x-large;font-family: 'Beau Rivage', cursive;"
+                    href="/user">Cherish Garments</a>
+            </div>
+            {{!-- <div class="input-group">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="navbar-brand form-control" placeholder="Search" />
+                </div>
+                <button type="button" class="navbar-brand btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div> --}}
+            <div>
+                <a class="navbar-brand text-secondary" href="/user/orders">Orders</a>
+                <a class="navbar-brand text-secondary" href="/user/viewCart">View cart</a>
+
+                <form class="dropdown">
+                    <button style="font-size:x-small; color:black" class="btn btn-secondary dropdown-toggle"
+                        type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        {{#if user}}
+                        {{user.first_name}}
+                        {{else}}
+                        Account
+                        {{/if}}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        {{#if user}}
+                        <a class="dropdown-item" href="/logout">Log out</a>
+                        {{else}}
+                        <a class="dropdown-item" href="/user/logIn">Log In</a>
+                        <a class="dropdown-item" href="/user/signUp">Create an account</a>
+                        {{/if}}
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+</body>

@@ -1,0 +1,41 @@
+
+
+  <container class="d-flex">
+    <div class="ml-auto">
+    <a class="ml-auto" href="/admin/Signup"><button type="button" class="btn btn-success mt-4 mr-2 mb-3">Add Staff</button></a>
+    <a class="ml-auto" href="/admin/addProducts"><button type="button" class="btn btn-success mt-4 mr-2 mb-3">Add Product</button></a>
+    </div>
+
+  </container>
+</div>
+  <div>
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
+          <th scope="col">Image</th> </th>
+                    
+        </tr>
+      </thead>
+      <tbody>
+        {{#each product}}
+        <tr>
+          <th scope="row">{{this.Product_id}}</th>
+          <td>{{this.product_name}}</td>
+          <td>{{this.category}}</td>
+          <td>{{this.price}}</td>
+          <td><img src="/images/{{this._id}}.jpg" style="height:2cm;width:2cm"></td>
+          <td>
+            <a href="/admin/productEdit/?id={{this._id}}"><button class="btn btn-primary">Edit</button></a>
+            <a href="/admin/productDelete/?id={{this._id}}">
+            <button onclick="return confirm('Are you sure to delete {{this.product_name}}')" class="btn btn-danger">Delete</button></a>
+            </div>         
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>

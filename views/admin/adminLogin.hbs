@@ -1,0 +1,45 @@
+
+<div>
+  {{#if loginOff}}
+  <h1 class="text-center p-4">You must login!</h1>
+  {{else}}
+  <h1 class="text-center p-4">Admin login</h1>
+  {{/if}}
+  {{#if message}}
+  <h4 class="text-center p-2 text-danger">{{message.msg}}</h4>
+   {{/if}}
+</div>
+
+<form method="post" action="/admin/products" style="padding-left:30em; padding-right:30em;padding-top:1em">
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="number" id="form2Example1" name="staff_id" class="form-control" required />
+    <label class="form-label" for="form2Example1">Staff id</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" name="password" class="form-control" required/>
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class=" form-check-input" type="checkbox" value="" id="form2Example31" checked />
+        <label class="form-check-label" for="form2Example31"> Remember me </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="admin/forgotPass">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Log in</button>
+
+</form>

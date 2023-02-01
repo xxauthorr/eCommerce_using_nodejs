@@ -1,0 +1,44 @@
+<div>
+    {{#if staff}}
+    <p class="text-right m-2">Added {{staff.name}} successully!</p>
+    {{/if}}
+    <h1 class="text-center p-4">Staff Sign Up</h1>
+
+</div>
+
+<form method="post" action="/admin/signedUp"
+    style="padding-left:30em;padding-bottom:50px; padding-right:30em;padding-top:1em">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Enter staff id</label>
+        <input type="number" id="form2Example1" class="form-control" name="staff_id" required />
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Enter staff name</label>
+        <input type="text" id="form2Example1" class="form-control" name="name" required />
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Enter password</label>
+        <input type="password" id="form2Example1" class="form-control" name="password" required />
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Confirm password</label>
+        <input type="password" id="form2Example1" class="form-control" required  />
+    </div>
+
+    <!-- 2 column grid layout for inline styling -->
+
+    <!-- Submit button -->
+    <div class="d-flex pt-4">
+        <div class="ml-auto">
+            <a href="/admin/signup"><button type="button" class="btn btn-outline-primary ">Reset all</button></a>
+            <button type="submit" class="btn btn-success ml-4 " style="width: 130px;">Log in</button>
+        </div>
+
+    </div>
+
+
+</form>

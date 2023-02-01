@@ -1,0 +1,35 @@
+<section>
+  <div class="container mt-4">
+   <div class="row">
+     <div class="col-md-6">
+       <h2 class="text-centre">Add Product</h2>
+       <form action="/admin/productAdded" method="post" enctype="multipart/form-data"  >
+         <label for="">Product Id</label>
+         <input type="number" name="Product_id" placeholder="Product Id" class="form-control" required>
+         
+         <label for="">Product Name</label>
+         <input type="text" name="product_name" placeholder="Product Name" class="form-control" required>
+         
+         <label for="">Category</label>
+         <select type="text" name="category" placeholder="Category" class="form-control">
+           <option>Mobile</option>
+           <option>Smart TV</option>
+           <option>Laptop</option>
+           <option>Earpod</option>
+           <option>Smart Watch</option>
+         </select>
+          
+         <label for="">Price</label>
+         <input type="number" name="price" placeholder="Price" class="form-control" required>
+         
+         <label for="">Quantity</label>
+         <input type="number" name="quantity"  placeholder="Quantity" class="form-control" required>
+         <label for="">Image</label>
+         <input type="file"  name="img" class=" form-control" required>
+         <a href="/admin/addProduct"></a><button style=" width:20ex" type="button" class="btn btn-outline-danger mt-4">Reset all</button>
+         <button type="submit" style="width:20ex;" class="btn btn-outline-success ml-4 mt-4">Submit</button>
+       </form>
+     </div>
+   </div> 
+  </div>
+</section>
